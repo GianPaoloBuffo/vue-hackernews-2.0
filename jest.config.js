@@ -13,7 +13,7 @@ module.exports = {
         'vue',
     ],
     // transformations we want jest to apply
-    tranform: {
+    transform: {
         // process `*.vue` files with `vue-jest`
         '.*\\.(vue)$': 'vue-jest',
         // process js files with jest
