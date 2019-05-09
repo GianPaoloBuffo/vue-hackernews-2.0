@@ -5,6 +5,7 @@ module.exports = {
         // the 'create-api' alias is defined in webpack, so we need to define it for jest too
         '^create-api$': '<rootDir>/src/api/create-api-client.js',
     },
+    
     // the file types we want jest to accept
     moduleFileExtensions: [
         'js',
@@ -12,6 +13,7 @@ module.exports = {
         // tell jest to handle `*.vue` files
         'vue',
     ],
+    
     // transformations we want jest to apply
     transform: {
         // process `*.vue` files with `vue-jest`
@@ -21,10 +23,21 @@ module.exports = {
         // process asstes with transform stub
         '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
     },
+    
     // we will use this to create snapshot tests
     snapshotSerializers: [
         'jest-serializer-vue',
     ],
+    
     // used for jsdom to mimic a real browser with a real url
     testURL: 'http://localhost/',
+    
+    // we should collect coverage
+    collectCoverage: true,
+
+    // set a directory for coverage cache
+    coverageDirectory: '<rootDir>/tests/__coverage__',
+
+    // set patterns to ignore for coverage (default will ignore node_modules in any case)
+    coveragePathIgnorePatterns: ['/node_modules/']
 };
