@@ -56,7 +56,7 @@ It is therefore not recommended to use this app as a reference for Vue SSR perfo
 # install dependencies
 npm install # or yarn
 
-# serve in dev mode, with hot reload at localhost:8080
+# serve in dev mode, with hot reload at localhost:8180
 npm run dev
 
 # build for production
