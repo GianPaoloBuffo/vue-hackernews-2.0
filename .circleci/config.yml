@@ -21,7 +21,7 @@ jobs:
     - run: # loop, sleep 0.1 second and check ip 8080 every loop
         name: waiting for server to be responsive (for e2e)
         command: |
-            while ! nc -z localhost 8080; do
+            while ! nc -z localhost 8180; do
               sleep 0.1
             done
     - run:
